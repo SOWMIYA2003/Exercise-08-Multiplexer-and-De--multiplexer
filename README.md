@@ -1,7 +1,10 @@
 # Exercise-08-Multiplexer-and-De-multiplexer
-### AIM: To implement 4 X1 multiplexer and 1X4 de multiplexer using verilog and validate its outputs
-### HARDWARE REQUIRED:  – PC, Cyclone II , USB flasher
-### SOFTWARE REQUIRED:   Quartus prime
+### AIM: 
+To implement 4 X1 multiplexer and 1X4 de multiplexer using verilog and validate its outputs
+### HARDWARE REQUIRED:  – 
+PC, Cyclone II , USB flasher
+### SOFTWARE REQUIRED:   
+Quartus prime
 ### THEORY 
 
 ## What are Multiplexer and Demultiplexer?
@@ -54,35 +57,66 @@ If the control input changes to AB = 10, then all the gates are restricted excep
 ### PROGRAM 
 /*
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: Sowmiya N.
+RegisterNumber:  212221230106.
 */
+### Multiplexer:
+```
+module muxf(I0,I1,I2,I3,S0,S1,Y);
+input I0,I1,I2,I3,S0,S1;
+output Y;
+wire P,Q,R,S,S0C,S1C;
+not (S0C,S0);
+not (S1C,S1);
+and (P,S0C,S1C,I0);
+and (Q,S0C,S1,I1);
+and (R,S0,S1C,I2);
+and (S,S0,S1,I3);
+or (Y,P,Q,R,S);
+endmodule 
 
-
-
-
-
-
+```
+### Demultiplexer:
+```
+module dmuxf(Y0,Y1,Y2,Y3,S0,S1,I);
+input S0,S1,I;
+output Y0,Y1,Y2,Y3;
+wire S0C,S1C;
+not (S0C,S0);
+not (S1C,S1);
+and (Y0,S0C,S1C,I);
+and (Y1,S0C,S1,I);
+and (Y2,S0,S1C,I);
+and (Y3,S0,S1,I);
+endmodule 
+```
 ### RTL LOGIC  
 
-
-
-
-
-
-
+### Multiplexer:
+![op](./mux4a.png)
+### Demultiplexer:
+![op](./dmuxf1.png)
 
 ### TIMING DIGRAMS  
 
-
-
-
-
+### Multiplexer:
+![op](./muxfa.png)
+![op](./muxfb.png)
+![op](./muxfc.png)
+![op](./muxfd.png)
+### Demultiplexer:
+![op](./dmuxa.png)
+![op](./dmuxb.png)
+![op](./dmuxc.png)
+![op](./dmuxd.png)
 ### TRUTH TABLE 
 
 
-
-
+### Multiplexer:
+![op](./atta.png)
+### Demultiplexer:
+![op](./attb.png)
 
 
 ### RESULTS 
+Implementation of  4 X1 multiplexer and 1X4 de multiplexer using verilog Program.
