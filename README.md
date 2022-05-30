@@ -58,6 +58,7 @@ Module Declaration. module is a keywords defined in Verilog .
 Input-Output Delecaration.
 
 Multiplexer has four inputs (I0,I1,I2,I3) and two select lines(S0,S1).
+
 Demultiplexer has single input(I) and two select lines(S0,S1).
 
 #### Step 3:
@@ -71,11 +72,11 @@ Ending module. endmodule is a keywords defined in Verilog.
 
 
 ### PROGRAM 
-/*
+```
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
 Developed by: Sowmiya N.
 RegisterNumber:  212221230106.
-*/
+```
 ### Multiplexer:
 ```
 module muxf(I0,I1,I2,I3,S0,S1,Y);
@@ -116,14 +117,22 @@ endmodule
 ### TIMING DIGRAMS  
 
 ### Multiplexer:
+#### when I0=0,I1=0,I2=0,I3=0,S1=0,S0=0-
 ![op](./muxfa.png)
+#### when I0=0,I1=1,I2=0,I3=0,S1=0,S0=1-
 ![op](./muxfb.png)
+#### when I0=0,I1=0,I2=1,I3=0,S1=1,S0=0-
 ![op](./muxfc.png)
+#### when I0=0,I1=0,I2=0,I3=1,S1=1,S0=1-
 ![op](./muxfd.png)
 ### Demultiplexer:
+#### when I=1,S1=0,S0=0;
 ![op](./dmuxa.png)
+#### when I=1,S1=0,S0=1;
 ![op](./dmuxb.png)
+#### when I=1,S1=1,S0=0;
 ![op](./dmuxc.png)
+#### when I=1,S1=1,S0=1;
 ![op](./dmuxd.png)
 ### TRUTH TABLE 
 
