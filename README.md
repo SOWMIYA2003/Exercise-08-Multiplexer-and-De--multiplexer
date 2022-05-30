@@ -50,7 +50,23 @@ If the control input changes to AB = 10, then all the gates are restricted excep
  
  
 ### Procedure
-/* write all the steps invloved */
+
+#### Step 1:
+Module Declaration. module is a keywords defined in Verilog .
+
+#### Step 2:
+Input-Output Delecaration.
+
+Multiplexer has four inputs (I0,I1,I2,I3) and two select lines(S0,S1).
+Demultiplexer has single input(I) and two select lines(S0,S1).
+
+#### Step 3:
+In multiplexer ,we use both AND logic and OR logic inorder to obtain the result.
+
+In demultiplexer , only AND gates are being used.
+
+#### Step 4:
+Ending module. endmodule is a keywords defined in Verilog.
 
 
 
